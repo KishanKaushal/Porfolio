@@ -27,12 +27,14 @@ a {
     text-decoration: none;
 
 }
-.nav-link{
+
+.nav-link {
     color: black;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
     letter-spacing: 1px;
 }
+
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
@@ -318,6 +320,10 @@ h4 {
         text-align: center;
     }
 
+    .nav {
+        display: none;
+    }
+
     .home-section .image-container {
         margin-top: 20px;
     }
@@ -424,14 +430,15 @@ a {
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
- 
+
 
 }
+
 .same-line:hover {
-border: 2.5px solid;
-animation: borderColorChange 4s infinite linear;
-transition: all ease-in;
-border-radius: 10px;
+    border: 2.5px solid;
+    animation: borderColorChange 4s infinite linear;
+    transition: all ease-in;
+    border-radius: 10px;
 }
 
 .same-line>img {
@@ -514,73 +521,79 @@ border-radius: 10px;
 
 
 h1 {
-   text-align: center;
-   color: #212529;
- 
+    text-align: center;
+    color: #212529;
+
 }
 
 form {
-   max-width: 600px;
-   text-align: center;
-   margin: 20px auto;
-  
-  input, textarea {
-     border:0; outline:0;
-     padding: 1em;
- 
-     display: block;
-     width: 100%;
-     margin-top: 1em;
-     font-family: 'Merriweather', sans-serif;
-   
-     resize: none;
-    
- 
-  }
-  
-  #input-submit {
-     color: #f4f4f4; 
-     background-color: #212529;
-     cursor: pointer;
-     font-size: 30px;
-    padding: 5px;
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
 
-  
-  }
-  
-  textarea {
-      height: 126px;
-  }
+    input,
+    textarea {
+        border: 0;
+        outline: 0;
+        padding: 1em;
+
+        display: block;
+        width: 100%;
+        margin-top: 1em;
+        font-family: 'Merriweather', sans-serif;
+
+        resize: none;
+
+
+    }
+
+    #input-submit {
+        color: #f4f4f4;
+        background-color: #212529;
+        cursor: pointer;
+        font-size: 30px;
+        padding: 5px;
+
+
+    }
+
+    textarea {
+        height: 126px;
+    }
 }
 
 
 .half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
 }
 
-.right { width: 50%; }
+.right {
+    width: 50%;
+}
 
 .left {
-     margin-right: 2%; 
+    margin-right: 2%;
 }
 
 
 @media (max-width: 480px) {
-  .half {
-     width: 100%; 
-     float: none;
-     margin-bottom: 0; 
-  }
+    .half {
+        width: 100%;
+        float: none;
+        margin-bottom: 0;
+    }
 }
 
 
 /* Clearfix */
 .cf:before,
 .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .cf:after {
