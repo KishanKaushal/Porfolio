@@ -320,11 +320,7 @@ h4 {
         text-align: center;
     }
 
-    .nav {
-        display: none;
-    }
-
-    .home-section .image-container {
+.home-section .image-container {
         margin-top: 20px;
     }
 }
