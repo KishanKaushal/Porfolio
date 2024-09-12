@@ -1,588 +1,187 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-
-body {
-    font-family: "Roboto", sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #beb9b946;
-}
-
-.container {
-    width: 100%;
-}
-
-
-/* Navbar is here  */
-.navbar {
-    height: 80px;
-}
-
-a {
-    text-decoration: none;
-
-}
-.nav-link{
-    color: black;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-.poppins-thin {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    letter-spacing: 1px;
-    font-style: normal;
-    font-size: 20px;
-
-}
-
-.poppins {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    text-align: center;
-}
-
-i {
-    margin-right: 10px;
-}
-
-
-
-/*----------bootstrap-navbar-css------------*/
-.navbar-logo {
-    padding: 15px;
-    color: #fff;
-}
-
-.navbar-mainbg {
-    background-color: #5161ce;
-    padding: 0px;
-}
-
-#navbarSupportedContent {
-    overflow: hidden;
-    position: relative;
-}
-
-#navbarSupportedContent ul {
-    padding: 0px;
-    margin: 0px;
-}
-
-#navbarSupportedContent ul li a i {
-    margin-right: 10px;
-}
-
-#navbarSupportedContent li {
-    list-style-type: none;
-    float: left;
-}
-
-#navbarSupportedContent ul li a {
-    color: rgba(255, 255, 255, 0.5);
-    text-decoration: none;
-    font-size: 15px;
-    display: block;
-    padding: 20px 20px;
-    transition-duration: 0.6s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    position: relative;
-}
-
-#navbarSupportedContent>ul>li.active>a {
-    color: #5161ce;
-    background-color: transparent;
-    transition: all 0.7s;
-}
-
-#navbarSupportedContent a:not(:only-child):after {
-    content: "\f105";
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 14px;
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    padding-right: 3px;
-    vertical-align: middle;
-    font-weight: 900;
-    transition: 0.5s;
-}
-
-#navbarSupportedContent .active>a:not(:only-child):after {
-    transform: rotate(90deg);
-}
-
-.hori-selector {
-    display: inline-block;
-    position: absolute;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    transition-duration: 0.6s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    background-color: #fff;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-top: 10px;
-}
-
-.hori-selector .right,
-.hori-selector .left {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: #fff;
-    bottom: 10px;
-}
-
-.hori-selector .right {
-    right: -25px;
-}
-
-.hori-selector .left {
-    left: -25px;
-}
-
-.hori-selector .right:before,
-.hori-selector .left:before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #5161ce;
-}
-
-.hori-selector .right:before {
-    bottom: 0;
-    right: -25px;
-}
-
-.hori-selector .left:before {
-    bottom: 0;
-    left: -25px;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-
-
-
-@media (min-width: 992px) {
-    .navbar-expand-custom {
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-    }
-
-    .navbar-expand-custom .navbar-nav {
-        -ms-flex-direction: row;
-        flex-direction: row;
-    }
-
-    .navbar-expand-custom .navbar-toggler {
-        display: none;
-    }
-
-    .navbar-expand-custom .navbar-collapse {
-        display: -ms-flexbox !important;
-        display: flex !important;
-        -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    }
-}
-
-@media (max-width: 991px) {
-    #navbarSupportedContent ul li a {
-        padding: 12px 30px;
-    }
-
-    .hori-selector {
-        margin-top: 0px;
-        margin-left: 10px;
-        border-radius: 0;
-        border-top-left-radius: 25px;
-        border-bottom-left-radius: 25px;
-    }
-
-    .hori-selector .left,
-    .hori-selector .right {
-        right: 10px;
-    }
-
-    .hori-selector .left {
-        top: -25px;
-        left: auto;
-    }
-
-    .hori-selector .right {
-        bottom: -25px;
-    }
-
-    .hori-selector .left:before {
-        left: -25px;
-        top: -25px;
-    }
-
-    .hori-selector .right:before {
-        bottom: -25px;
-        left: -25px;
-    }
-}
-
-.h4,
-h4 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-/* Home is here  */
-
-
-.home-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.home-section .content {
-    flex: 1;
-    padding: 20px;
-}
-
-.home-section .content h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    width: 101%;
-}
-
-.home-section .content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.home-section .buttons {
-    margin-top: 20px;
-}
-
-.home-section .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.home-section .btn:hover {
-    background-color: #555;
-}
-
-.home-section .image-container {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-}
-
-.home-section .image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .home-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .home-section .image-container {
-        margin-top: 20px;
-    }
-}
-
-/* // card01 is here  */
-@property --rotate {
-    syntax: "<angle>";
-    initial-value: 132deg;
-    inherits: false;
-}
-
-:root {
-    --card-height: 30vh;
-
-    --card-width: calc(var(--card-height) / 1.5);
-}
-
-
-
-
-
-.card {
-    background: #f4f4f4;
-    width: var(--card-width);
-    width: 25vw;
-    background-size: cover;
-    height: var(--card-height);
-    padding: 3px;
-    position: relative;
-    border-radius: 6px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
-    cursor: pointer;
-    font-family: cursive;
-
-
-}
-
-.card:hover {
-    color: rgb(88 199 250 / 100%);
-    transition: color 1s;
-}
-
-.card:hover:before,
-.card:hover:after {
-    animation: none;
-    opacity: 0;
-}
-
-
-.card::before {
-    content: "";
-    width: 103%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(var(--rotate), #ffcad4, #faedcd 43%, #ffafcc);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-}
-
-
-@keyframes spin {
-    0% {
-        --rotate: 0deg;
-    }
-
-    100% {
-        --rotate: 360deg;
-    }
-}
-
-a {
-    color: #212534;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-top: 2rem;
-}
-
-.card-text {
-    font-size: 15px;
-}
-
-.card-img-top {
-    width: 50%;
-}
-
-
-/* third section is here  */
-.same-line {
-    min-height: 80px;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    text-align: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
- 
-
-}
-.same-line:hover {
-border: 2.5px solid;
-animation: borderColorChange 4s infinite linear;
-transition: all ease-in;
-border-radius: 10px;
-}
-
-.same-line>img {
-
-    width: 400px;
-    height: 350px;
-    border-radius: 20px;
-
-}
-
-.same-line>img:hover {
-    cursor: pointer;
-
-}
-
-@keyframes borderColorChange {
-    0% {
-        border-color: red;
-
-    }
-
-    25% {
-        border-color: yellow;
-    }
-
-    50% {
-        border-color: green;
-    }
-
-    75% {
-        border-color: blue;
-    }
-
-    100% {
-        border-color: red;
-    }
-}
-
-#scrollspyHeading3 {
-    width: 30%;
-    background-color: #f4f4f4;
-    margin: 10px;
-    padding: 10px;
-    width: 100%;
-
-}
-
-.round {
-    border-radius: 50%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.363);
-    color: #f4f4f4;
-
-}
-
-.full {
-    width: 100%;
-}
-
-.text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-
-
-}
-
-.chota {
-    font-size: 80px;
-}
-
-.big {
-    font-size: 35px;
-
-}
-
-/* Contact Section */
-
-
-h1 {
-   text-align: center;
-   color: #212529;
- 
-}
-
-form {
-   max-width: 600px;
-   text-align: center;
-   margin: 20px auto;
-  
-  input, textarea {
-     border:0; outline:0;
-     padding: 1em;
- 
-     display: block;
-     width: 100%;
-     margin-top: 1em;
-     font-family: 'Merriweather', sans-serif;
-   
-     resize: none;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Index.css"/>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar-example2 " class="navbar navbar-light card-text px-3" data-aos="flip-left">
+        <a class="navbar-brand poppins-thin nav-link" href="#" >Kishan Kaushal</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link " href="#scrollspyHeading1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Works</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading3">Services</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading4">Contact</a>
+          </li>
+      
+         
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#scrollspyHeading3">Third</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#scrollspyHeading4">Fourth</a>
+              </li>     
+            </ul>
+          </li>
+        </ul>
+        <img src="https://cdn-icons-png.flaticon.com/128/10486/10486773.png" class="hide" width="20px" height="20px"> 
+      </nav>
+      <div
+        data-bs-spy="scroll"
+        data-bs-target="#navbar-example2"
+        data-bs-offset="0"
+        class="scrollspy-example"
+        tabindex="0">
+        <h4 id="scrollspyHeading1">
+          <div class="home">
+            <section class="home-section">
+              <div class="content">
+                <h2 class="poppins-thin HEADER">Hello, I'm Kishan Kaushal</h2>
+                <p class="poppins nav-link">
+                  I'm a web designer who creates visually stunning, highly
+                  functional websites that blend creativity with technical
+                  precision for optimal user experience.
+                </p>
+                <div class="buttons">
+                  <a href="about.html" class="btn poppins"> More About Me</a>
+                  <a href="resume.png" id="downloadBtn" class="btn poppins">My Projects</a>
+                 
+                </div>
+              </div>
+              <div class="image-container" data-aos="zoom-in-up" data-aos-id="super-duper">
+                <img
+                  src="https://png.pngtree.com/png-clipart/20231016/original/pngtree-professional-web-developer-3d-illustration-png-image_13322701.png"
+                  alt="Kishan Kaushal" width="400px" class="img" />
+              </div>
+            </section>
+          </div>
+        </h4>
+      
+        <h4 id="scrollspyHeading2">
+          <div class="card img poppins">
+            <a href="https://mythrillfiction.com/" target="_blank">
+             <img src="https://europeitoutsourcing.com/wp-content/uploads/2018/11/outsourcing-content-creation-services.png" width="60%" height="70%">
+             <p class="card-text">
+              Responsive web design adapts seamlessly across devices, ensuring optimal user experience.
+             </p>
+            </a>
+          </div>   
+           <div class="card img poppins">
+            <a href="https://mythrillfiction.com/" target="_blank">
+             <img src="https://www.digitalsilk.com/wp-content/uploads/2023/02/Creative-web-design-agency-featured-work-658x590.png" width="60%" height="70%">
+             <p class="card-text">
+              Effective web design combines aesthetics, functionality, and user-centric experiences
+             </p>
+            </a>
+          </div>  <div class="card img">
+            <a href="https://mythrillfiction.com/" target="_blank">
+             <img src="https://www.sumydesigns.com/wp-content/uploads/2023/12/laptop.png" width="60%" height="70%">
+             <p class="card-text poppins">
+              Well-crafted design is both visually appealing and perfectly aligned with functionality.
+             </p>
+            </a>
+          </div>  
+        
+        </h4>
     
- 
-  }
-  
-  #input-submit {
-     color: #f4f4f4; 
-     background-color: #212529;
-     cursor: pointer;
-     font-size: 30px;
-    padding: 5px;
+        <h4 id="scrollspyHeading3">
+          <div class="flex full " data-aos="fade-right">
+            <div class="gap" >
+          <div class="same-line" > 
+            <div class="poppins-thin text" >
+              <p class="chota">Web Design</p>
+              <p class="big">Creative, Satisfying & Impactful </p>
+            </div>
+          <img src="https://www.shutterstock.com/image-vector/cartoon-3d-character-developer-designer-600nw-2212355381.jpg"  width="350px" class="img" >
+        </div>
+        </div>
+        </div> 
+          <div class="flex full" data-aos="fade-left">
+            <div class="gap">
+          <div class="same-line"> 
+            <img src="https://media.licdn.com/dms/image/D5612AQEhKguQVjXr4g/article-cover_image-shrink_600_2000/0/1693971265825?e=2147483647&v=beta&t=vRAWRIEHIp6sKRbLxQ_QmHTgjmTRYhj8vOLwlhskjzg"  width="350px" class="img" >
+            <div class="poppins-thin text" >
+              <p class="chota">Front-End</p>
+              <p class="big">Responsive, Optimized & Dynamic</p>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="flex full" data-aos="fade-right">
+          <div class="gap">
+        <div class="same-line"> 
+          <div class="poppins-thin text" >
+            <p class="chota">UI/UX Design</p>
+            <p class="big">Engaging & User-Friendly</p>
+          </div>
+        <img src="https://www.yellowslice.in/assets/yassets/images/Sr-UI-Designer.png"  width="350px" class="img">
+      </div>
+      </div>
+      </div>
+        </h4>
+      
+        <h4 id="scrollspyHeading4">
+          <h1 class="chota poppins-thin">Connect With Me</h1>
+<form class="cf">
+  <div class=" half left cf ">
+    <input type="text" id="input-name" placeholder="Name" class="card-text poppins-thin">
+    <input type="email" id="input-email" placeholder="Email address" class="poppins-thin card-text">
+    <input type="text" id="input-subject" placeholder="Subject" class="poppins-thin card-text">
+  </div>
+  <div class="half right cf">
+    <textarea name="message" type="text" id="input-message" placeholder="Which Purpose" class="poppins-thin 
+    card-text"></textarea>
+  </div>  
+  <input type="submit" value="Submit" id="input-submit" class="poppins-thin">
+</form>
+        </h4>
+      </div>
+    </div> 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+<!-- Three.js is needed for 3d Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+<!-- ControlKit is needed for Debug Panel -->
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Index.js"></script>
+  </body>
+</html>
 
-  
-  }
-  
-  textarea {
-      height: 126px;
-  }
-}
 
-
-.half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
-}
-
-.right { width: 50%; }
-
-.left {
-     margin-right: 2%; 
-}
-
-
-@media (max-width: 480px) {
-  .half {
-     width: 100%; 
-     float: none;
-     margin-bottom: 0; 
-  }
-}
-
-
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
