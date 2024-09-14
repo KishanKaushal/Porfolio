@@ -1,3 +1,27 @@
+// Hamberger Responsive
+
+const hidebtn = document.querySelector('.hide')
+const NavShow = document.querySelector('.nav')
+
+// Hide the navbar when 'Hide' button is clicked
+hidebtn.addEventListener('click', function() {
+  NavShow.style.display = "block"
+  NavShow.style.background = 'black'
+  NavShow.style.width= "100%"
+  hidebtn.style.display = 'none'
+});
+
+// Hide the navbar when 'Close' button is clicked
+
+
+
+
+
+
+
+
+
+
 // For Smooth Scrolling
 const scroll = new LocomotiveScroll({
   el: document.querySelector(".container"),
