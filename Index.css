@@ -21,6 +21,9 @@ body {
 /* Navbar is here  */
 .navbar {
     height: 80px;
+    position: relative;
+    top: -20px;
+
 }
 
 a {
@@ -40,9 +43,10 @@ a {
     font-weight: 800;
     letter-spacing: 1px;
     font-style: normal;
-    font-size: 20px;
+    font-size: 30px;
 
 }
+
 
 .poppins {
     font-family: "Poppins", sans-serif;
@@ -54,6 +58,12 @@ i {
     margin-right: 10px;
 }
 
+.close {
+    height: 30px;
+    position: relative;
+    top: 35px;
+    display: none;
+}
 
 
 /*----------bootstrap-navbar-css------------*/
@@ -286,7 +296,7 @@ h4 {
     margin-top: 20px;
 }
 
-.home-section .btn {
+.btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #333;
@@ -297,8 +307,10 @@ h4 {
     transition: background-color 0.3s ease;
 }
 
-.home-section .btn:hover {
-    background-color: #555;
+.btn:hover {
+    background-color: #4d4b4b;
+    color: #fff;
+    font-weight: 700;
 }
 
 .home-section .image-container {
@@ -312,9 +324,11 @@ h4 {
     height: auto;
     border-radius: 10px;
 }
-.hide{
+
+.hide {
     display: none;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .home-section {
@@ -325,7 +339,8 @@ h4 {
     .nav {
         display: none;
     }
-    .hide{
+
+    .hide {
         display: block;
         position: relative;
         top: 15px;
@@ -349,23 +364,17 @@ h4 {
     --card-height: 30vh;
     --card-width: calc(var(--card-height) / 1.5);
 }
+
 .card {
-    background: #f4f4f4;
-    width: var(--card-width);
-    width: 25vw;
-    background-size: cover;
-    height: var(--card-height);
-    padding: 3px;
-    position: relative;
-    border-radius: 6px;
-    justify-content: center;
-    align-items: center;
+    display: flex;
     text-align: center;
     display: flex;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
-    cursor: pointer;
-    font-family: cursive;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    width: 30%;
+    flex-wrap: wrap;
+    border-radius: 50px;
 }
 
 .card:hover {
@@ -380,18 +389,6 @@ h4 {
 }
 
 
-.card::before {
-    content: "";
-    width: 103%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(var(--rotate), #ffcad4, #faedcd 43%, #ffafcc);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-}
 
 
 @keyframes spin {
@@ -412,12 +409,13 @@ a {
     margin-top: 2rem;
 }
 
-.card-text {
-    font-size: 15px;
-}
 
 .card-img-top {
-    width: 50%;
+    margin-top: 20px;
+    width: 30%;
+    height: 30%;
+    border-radius: 100px;
+  
 }
 
 
