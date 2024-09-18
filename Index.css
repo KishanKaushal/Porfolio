@@ -44,10 +44,11 @@ a {
     letter-spacing: 1px;
     font-style: normal;
     font-size: 30px;
-
 }
-
-
+.textarea {
+    height: 32vh;
+    width: 100%;
+}
 .poppins {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -102,15 +103,13 @@ i {
     font-size: 15px;
     display: block;
     padding: 20px 20px;
-    transition-duration: 0.6s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
 }
 
 #navbarSupportedContent>ul>li.active>a {
     color: #5161ce;
     background-color: transparent;
-    transition: all 0.7s;
+    transition: all 7s;
 }
 
 #navbarSupportedContent a:not(:only-child):after {
@@ -256,7 +255,7 @@ i {
 
 .h4,
 h4 {
-    display: flex;
+
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -375,6 +374,7 @@ h4 {
     width: 30%;
     flex-wrap: wrap;
     border-radius: 50px;
+    padding: 10px;
 }
 
 .card:hover {
@@ -415,7 +415,7 @@ a {
     width: 30%;
     height: 30%;
     border-radius: 100px;
-  
+
 }
 
 
@@ -516,8 +516,6 @@ a {
 
 }
 
-/* Contact Section */
-
 
 h1 {
     text-align: center;
@@ -525,76 +523,275 @@ h1 {
 
 }
 
-form {
-    max-width: 600px;
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures content wraps on smaller screens */
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Contact From is here  */
+#contact {
+    width: 100%;
+    height: 100%;
+
+}
+.sent{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+}
+.section-header {
     text-align: center;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
 
-    input,
-    textarea {
-        border: 0;
-        outline: 0;
-        padding: 1em;
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+}
 
-        display: block;
-        width: 100%;
-        margin-top: 1em;
-        font-family: 'Merriweather', sans-serif;
+/* Left contact page */
+.form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
 
-        resize: none;
+.form-control,
+textarea {
+    max-width: 400px;
+    font-family: "Poppins", sans-serif;
+    color: #ac2f2f;
+    letter-spacing: 1px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+}
+
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+    transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+    max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+    list-style-type: none;
+    padding-right: 20px;
+
+}
+
+.list-item {
+    line-height: 4;
+    color: #aaa;
+}
+
+.contact-text , .contact-text a{
+    font-family: "Poppins";
+    font-weight: 700;
+    letter-spacing: 1.9px;
+   color: black;
+}
+.place{
+    position: relative;
+    left: 50px;
+    
+}
 
 
+.phone {
+    margin-left: 56px;
+}
+
+.gmail {
+    margin-left: 53px;
+}
+/* Social Media Icons */
+.social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.social-media-list li a {
+    color: #fff;
+}
+
+.social-media-list li {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.social-media-list li img{
+width: 50px;
+}
+.social-media-list li img:hover{
+width: 50px;
+}
+.social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+    background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+    opacity: 1;
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+    color: #000;
+}
+
+.copyright {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 00;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, .6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
     }
 
-    #input-submit {
-        color: #f4f4f4;
-        background-color: #212529;
-        cursor: pointer;
-        font-size: 30px;
-        padding: 5px;
-
-
+    .direct-contact-container,
+    .form-horizontal {
+        margin: 0 auto;
     }
 
-    textarea {
-        height: 126px;
+    .direct-contact-container {
+        margin-top: 60px;
+       width: 100%;
+    }
+
+    .social-media-list li {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+
+    .social-media-list li:after {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
     }
 }
 
+@media screen and (max-width: 569px) {
 
-.half {
-    float: left;
-    width: 48%;
-    margin-bottom: 1em;
-}
-
-.right {
-    width: 50%;
-}
-
-.left {
-    margin-right: 2%;
-}
-
-
-@media (max-width: 480px) {
-    .half {
-        width: 100%;
+    .direct-contact-container,
+    .form-wrapper {
         float: none;
-        margin-bottom: 0;
+        margin: 0 auto;
     }
+
+    .form-control,
+    textarea {
+
+        margin: 0 auto;
+    }
+
+
+    .name,
+    .email,
+    textarea {
+        width: 280px;
+    }
+
+    .direct-contact-container {
+        margin-top: 60px;
+        max-width: 280px;
+    }
+
+    .social-media-list {
+        left: 0;
+    }
+
+    .social-media-list li {
+        height: 55px;
+        width: 55px;
+        line-height: 55px;
+        font-size: 2rem;
+    }
+
+    .social-media-list li:after {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+    }
+
 }
 
-
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-}
-
-.cf:after {
-    clear: both;
+@media screen and (max-width: 410px) {
+    .send-button {
+        width: 99%;
+    }
 }
