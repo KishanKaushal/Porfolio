@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <style>
+      /* Basic styling for the layout */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header,
+      section,
+      footer {
+        padding: 20px;
+        margin: 10px;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:50px
+      }
+      .logo{
+        width: 80px;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        align-items: center;
+      }
+      #about img {
+        max-width: 100%;
+        height: auto;
+      }
+      .service-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .service-container article {
+        width: 30%;
+      }
+      blockquote {
+        border-left: 5px solid #333;
+        padding-left: 10px;
+        margin: 20px 0;
+      }
+      .back-to-top {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+      }
+      footer ul {
+        list-style: none;
+        padding: 0;
+      }
+      footer ul li {
+        display: inline;
+        margin-right: 10px;
+      }
+      footer ul li a {
+        color: rgb(101, 140, 145);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      #contact > form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+      }
+      #contact > form > button {
+        display: block;
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section with Navigation -->
+    <header>
+      <img  class="logo" src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Image.png" alt="Logo" />
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        We are a dedicated team providing top-notch services to our clients.
+      </p>
+      <figure>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH-vWqsQUCxVRcq9INIxF2Do92Y7FkDWoLHw&s"
+          alt="Our Team"
+        />
+        <figcaption>Our professional team at work</figcaption>
+      </figure>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-container">
+        <article>
+          <h3>Web Design</h3>
+          <p>
+            We create beautiful and functional websites that meet your business
+            needs.
+          </p>
+        </article>
+        <article>
+          <h3>SEO Optimization</h3>
+          <p>
+            Our SEO strategies will help your website rank higher in search
+            engine results.
+          </p>
+        </article>
+        <article>
+          <h3>Content Writing</h3>
+          <p>
+            We provide engaging and optimized content to enhance your online
+            presence.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+      <h2>What Our Clients Say</h2>
+      <blockquote>
+        "The team did a fantastic job with our website. Highly recommended!"
+        <cite>- John Doe, CEO of XYZ Corp</cite>
+      </blockquote>
+      <blockquote>
+        "Their SEO services really helped us improve our online visibility."
+        <cite>- Jane Smith, Marketing Manager at ABC Ltd.</cite>
+      </blockquote>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="submit_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+      <ul>
+        <li><a href="https://facebook.com">Facebook</a></li>
+        <li><a href="https://twitter.com">Twitter</a></li>
+        <li><a href="https://instagram.com">Instagram</a></li>
+      </ul>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">Back to Top</a>
+  </body>
+</html>

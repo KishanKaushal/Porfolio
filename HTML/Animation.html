@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Grid and Flexbox Sections</title>
+    <style>
+        /* Grid Section Styles */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+            background-color: #dcdcdc;
+        }
+
+        /* Flexbox Section Styles */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .flex-item {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: slideIn 0.5s ease-in-out;
+            flex: 1;
+        }
+
+        .flex-item:hover {
+            transform: translateY(-10px);
+            background-color: #c0c0c0;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Grid Section -->
+    <section class="grid-section">
+        <h2>Grid Layout Section</h2>
+        <div class="grid-container">
+            <div class="grid-item">Grid Item 1</div>
+            <div class="grid-item">Grid Item 2</div>
+            <div class="grid-item">Grid Item 3</div>
+            <div class="grid-item">Grid Item 4</div>
+        </div>
+    </section>
+
+    <!-- Flexbox Section -->
+    <section class="flex-section">
+        <h2>Flexbox Layout Section</h2>
+        <div class="flex-container">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+        </div>
+    </section>
+
+</body>
+</html>
