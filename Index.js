@@ -1,3 +1,30 @@
+  // Hamberger Responsive
+
+const hidebtn = document.querySelector(".hide");
+const closebtn = document.querySelector(".close");
+const NavShow = document.querySelector(".nav");
+
+// Hide the navbar when 'Hide' button is clicked
+hidebtn.addEventListener("click", function () {
+  NavShow.style.display = "block";
+  NavShow.style.width = "100%";
+  hidebtn.style.display = "none";
+  closebtn.style.display = "block";
+  closebtn.style.position = "absolute";
+  closebtn.style.top = "60%";
+  closebtn.style.left = "92%";
+});
+
+// Hide the navbar when 'Close' button is clicked
+closebtn.addEventListener("click", function () {
+  NavShow.style.display = "none";
+  hidebtn.style.display = "block";
+  closebtn.style.display = "none";
+});
+
+
+
+
 // For Smooth Scrolling
 const scroll = new LocomotiveScroll({
   el: document.querySelector(".container"),
@@ -14,28 +41,30 @@ gsap.from(".nav-link", {
 });
 
 //scrollheading02 me card
-gsap.fromTo(".card", 
+gsap.fromTo(
+  ".card",
   { x: 20, opacity: 0 }, // Starting position
-  { 
-    x: 0, opacity: 1, duration: 1, 
+  {
+    x: 0,
+    opacity: 1,
+    duration: 1,
     scrollTrigger: {
       trigger: ".scrollspyHeading2",
       start: "top 50%", // Start animation when image container is 80% from top
-      end:"top 80%",
-      toggleActions: "play none none none" // Animation plays once
-    }
+      end: "top 80%",
+      toggleActions: "play none none none", // Animation plays once
+    },
   }
 );
 
-// SHERY JS ANIMATION 
-// For Mouse Hover 
+// SHERY JS ANIMATION
+// For Mouse Hover
 Shery.mouseFollower({
   //Parameters are optional.
   skew: true,
   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
   duration: 0.1,
 });
- 
 
 //for button moment ke liye
 Shery.imageMasker(".img" /* Element to target.*/, {
@@ -43,16 +72,14 @@ Shery.imageMasker(".img" /* Element to target.*/, {
   text: "Welcome",
   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
   duration: 0.5,
-  y:10
+  y: 10,
 });
 
-
-// Hover karne par Magnet ki Tarah Kam karta hai 
-Shery.makeMagnet(".btn" , {
+// Hover karne par Magnet ki Tarah Kam karta hai
+Shery.makeMagnet(".btn", {
   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
   duration: 1,
 });
-
 
 // Content me Jo H1 Hai use animate karne ke liye
 Shery.textAnimate(".content h2", {
@@ -69,8 +96,20 @@ Shery.imageMasker(".img" /* Element to target.*/, {
   text: "Welcome",
   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
   duration: 0.5,
-  y:10
+  y: 10,
 });
+
+
+// Contact Code 
+document.querySelector('#contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  e.target.elements.name.value = '';
+  e.target.elements.email.value = '';
+  e.target.elements.message.value = '';
+});
+
+
+
 
 
 // ---------Responsive-navbar-active-animation-----------
@@ -163,13 +202,12 @@ document.querySelector(".btn").addEventListener("click", function () {
   alert("Button clicked!");
 });
 
-
 // RESUME DOWNLOAD
-document.getElementById("downloadBtn").onclick = function() {
+document.getElementById("downloadBtn").onclick = function () {
   const link = document.createElement("a");
-  link.href = 'resume.pdf';  // Ensure the file is in the same directory, or provide the full path
-  link.setAttribute('download', 'My_Resume.pdf');  // Suggested name for the download
+  link.href = "resume.pdf"; // Ensure the file is in the same directory, or provide the full path
+  link.setAttribute("download", "My_Resume.pdf"); // Suggested name for the download
   document.body.appendChild(link);
   link.click();
-  document.body.removeChild(link);  // Clean up
+  document.body.removeChild(link); // Clean up
 };
