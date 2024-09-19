@@ -45,10 +45,12 @@ a {
     font-style: normal;
     font-size: 30px;
 }
+
 .textarea {
     height: 32vh;
     width: 100%;
 }
+
 .poppins {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -537,11 +539,13 @@ h1 {
     height: 100%;
 
 }
-.sent{
+
+.sent {
     width: 100%;
     font-family: "Poppins", sans-serif;
     font-size: 20px;
 }
+
 .section-header {
     text-align: center;
     margin: 0 auto;
@@ -622,16 +626,18 @@ textarea {
     color: #aaa;
 }
 
-.contact-text , .contact-text a{
+.contact-text,
+.contact-text a {
     font-family: "Poppins";
     font-weight: 700;
     letter-spacing: 1.9px;
-   color: black;
+    color: black;
 }
-.place{
+
+.place {
     position: relative;
     left: 50px;
-    
+
 }
 
 
@@ -642,6 +648,7 @@ textarea {
 .gmail {
     margin-left: 53px;
 }
+
 /* Social Media Icons */
 .social-media-list {
     position: relative;
@@ -668,12 +675,15 @@ textarea {
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
-.social-media-list li img{
-width: 50px;
+
+.social-media-list li img {
+    width: 50px;
 }
-.social-media-list li img:hover{
-width: 50px;
+
+.social-media-list li img:hover {
+    width: 50px;
 }
+
 .social-media-list li:after {
     content: '';
     position: absolute;
@@ -722,6 +732,33 @@ hr {
         flex-direction: column;
     }
 
+    .flex {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .same-line {
+        width: 80%;
+    }
+
+    .big {
+        font-size: 25px;
+    }
+
+    .chota {
+        font-size: 60px;
+    }
+    .gap {
+        justify-content: center;
+        display: flex;
+    }
+    .home-section .content{
+        z-index: 12;
+    }
     .direct-contact-container,
     .form-horizontal {
         margin: 0 auto;
@@ -729,7 +766,7 @@ hr {
 
     .direct-contact-container {
         margin-top: 60px;
-       width: 100%;
+        width: 100%;
     }
 
     .social-media-list li {
