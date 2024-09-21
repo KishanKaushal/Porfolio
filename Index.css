@@ -769,7 +769,6 @@ hr {
     .nav {
         display: none;
         z-index: 100;
-        background-color: red;
     }
     .home-section .content {
         z-index: 12;
