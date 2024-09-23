@@ -289,8 +289,9 @@ h4 {
 }
 
 .home-section .content p {
-    font-size: 1.2em;
+    font-size: 1.6em;
     margin-bottom: 20px;
+    padding: 5px;
 }
 
 .home-section .buttons {
@@ -335,6 +336,7 @@ h4 {
     .home-section {
         flex-direction: column;
         text-align: center;
+        padding: 10px;
     }
 
     .nav {
@@ -736,6 +738,15 @@ hr {
         flex-direction: column;
     }
 
+    .same-line>img {
+        width: 260px;
+        height: 250px;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+
     .card {
         width: 90%;
         margin-bottom: 10px;
@@ -752,24 +763,38 @@ hr {
     .chota {
         font-size: 50px;
     }
-    .nav-link{
+
+    .nav-link {
         padding: 0;
     }
+
     .home-section .buttons {
         margin-top: 20px;
         display: flex;
         width: 105%;
-        align-items: center;
+     
         justify-content: center;
+
     }
+
     .gap {
         justify-content: center;
         display: flex;
     }
+
     .nav {
         display: none;
         z-index: 100;
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+        transition: all;
     }
+
+    .nav-item a {
+        color: white;
+    }
+
     .home-section .content {
         z-index: 12;
     }
@@ -784,6 +809,7 @@ hr {
         position: relative;
         left: 15px;
     }
+
     .list-item {
         line-height: 2;
     }
@@ -804,11 +830,12 @@ hr {
         height: 60px;
         line-height: 60px;
     }
-    .section-header{
-        font-size: 4rem;
+
+    .section-header {
+        font-size: 3rem;
         padding: 20px 0;
     }
-   
+
 }
 
 @media screen and (max-width: 569px) {
@@ -819,10 +846,16 @@ hr {
         margin: 0 auto;
     }
 
+    .home-section .content h2 {
+        font-size: 1.3em;
+    }
+    .home-section .content p {
+        font-size: 1em;
+    }
+
     .form-control,
     textarea {
-
-        margin: 0 auto;
+        margin: 5px 0;
     }
 
 
@@ -853,13 +886,19 @@ hr {
         height: 55px;
         line-height: 55px;
     }
-    .contact-list{
+
+    .contact-list {
         left: -50px;
     }
+
     same-line>img {
         width: 250px;
         height: 250px;
         border-radius: 20px;
+    }
+
+    .home-section .buttons {
+        flex-direction: column;
     }
 }
 
@@ -867,4 +906,5 @@ hr {
     .send-button {
         width: 99%;
     }
+
 }
