@@ -1,4 +1,4 @@
-  // Hamberger Responsive
+// Hamberger Responsive
 
 const hidebtn = document.querySelector(".hide");
 const closebtn = document.querySelector(".close");
@@ -12,7 +12,7 @@ hidebtn.addEventListener("click", function () {
   closebtn.style.display = "block";
   closebtn.style.position = "absolute";
   closebtn.style.top = "60%";
-  closebtn.style.left = "92%";
+  closebtn.style.left = "92%";  
 });
 
 // Hide the navbar when 'Close' button is clicked
