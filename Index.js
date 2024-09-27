@@ -1,5 +1,14 @@
 // Hamberger Responsive
 
+const scroll = new LocomotiveScroll({
+  el: document.querySelector(".container"),
+  smooth: true,
+});
+
+window.addEventListener('load', function() {
+  if (window.location.hash) {
+function handleLinkClick(event) {
+  event.preventDefault(); 
 const hidebtn = document.querySelector(".hide");
 const closebtn = document.querySelector(".close");
 const NavShow = document.querySelector(".nav");
@@ -26,19 +35,7 @@ closebtn.addEventListener("click", function () {
 
 
 // For Smooth Scrolling
-const scroll = new LocomotiveScroll({
-  el: document.querySelector(".container"),
-  smooth: true,
-});
-gsap.registerPlugin(ScrollTrigger);
-// Gsap Animation Here
-gsap.from(".nav-link", {
-  stagger: 0.3,
-  y: 10,
-  duration: 0.2,
-  ease: Power3,
-  opacity: 0,
-});
+
 
 //scrollheading02 me card
 gsap.fromTo(
@@ -59,12 +56,7 @@ gsap.fromTo(
 
 // SHERY JS ANIMATION
 // For Mouse Hover
-Shery.mouseFollower({
-  //Parameters are optional.
-  skew: true,
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  duration: 0.1,
-});
+
 
 //for button moment ke liye
 Shery.imageMasker(".img" /* Element to target.*/, {
@@ -211,3 +203,52 @@ document.getElementById("downloadBtn").onclick = function () {
   link.click();
   document.body.removeChild(link); // Clean up
 };
+}
+window.location.href = window.location.origin;
+}
+});
+
+// Skill section is here
+let number01 = document.getElementById("number01");
+let counter01 = 0;
+setInterval(() => {
+  if (counter01 == 80) {
+    clearInterval();
+  } else {
+    counter01 += 1;
+    number01.innerHTML = "HTML " + counter01 + "%";
+  }
+}, 30);
+
+let number02 = document.getElementById("number02");
+let counter02 = 0;
+setInterval(() => {
+  if (counter02 == 70) {
+    clearInterval();
+  } else {
+    counter02 += 1;
+    number02.innerHTML = "CSS " + counter02 + "%";
+  }
+}, 30);
+
+let number03 = document.getElementById("number03");
+let counter03 = 0;
+setInterval(() => {
+  if (counter03 == 60) {
+    clearInterval();
+  } else {
+    counter03 += 1;
+    number03.innerHTML = "Javascript " + counter03 + "%";
+  }
+}, 30);
+
+let number04 = document.getElementById("number04");
+let counter04 = 0;
+setInterval(() => {
+  if (counter04 == 50) {
+    clearInterval();
+  } else {
+    counter04 += 1;
+    number04.innerHTML = "React " + counter04 + "%";
+  }
+}, 30);
