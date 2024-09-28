@@ -5,10 +5,7 @@ const scroll = new LocomotiveScroll({
   smooth: true,
 });
 
-window.addEventListener('load', function() {
-  if (window.location.hash) {
-function handleLinkClick(event) {
-  event.preventDefault(); 
+
 const hidebtn = document.querySelector(".hide");
 const closebtn = document.querySelector(".close");
 const NavShow = document.querySelector(".nav");
@@ -34,7 +31,16 @@ closebtn.addEventListener("click", function () {
 
 
 
-// For Smooth Scrolling
+
+window.addEventListener('load', function() {
+  if (window.location.hash) {
+function handleLinkClick(event) {
+  event.preventDefault(); 
+
+
+
+
+
 
 
 //scrollheading02 me card
@@ -99,10 +105,6 @@ document.querySelector('#contact-form').addEventListener('submit', (e) => {
   e.target.elements.email.value = '';
   e.target.elements.message.value = '';
 });
-
-
-
-
 
 // ---------Responsive-navbar-active-animation-----------
 function test() {
