@@ -5,6 +5,20 @@ const scroll = new LocomotiveScroll({
   smooth: true,
 });
 
+//for button moment ke liye
+Shery.imageMasker(".img" /* Element to target.*/, {
+  mouseFollower: true,
+  text: "Welcome",
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 0.5,
+  y: 10,
+});
+
+// Hover karne par Magnet ki Tarah Kam karta hai
+Shery.makeMagnet(".btn", {
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 1,
+});
 
 const hidebtn = document.querySelector(".hide");
 const closebtn = document.querySelector(".close");
@@ -64,20 +78,8 @@ gsap.fromTo(
 // For Mouse Hover
 
 
-//for button moment ke liye
-Shery.imageMasker(".img" /* Element to target.*/, {
-  mouseFollower: true,
-  text: "Welcome",
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  duration: 0.5,
-  y: 10,
-});
 
-// Hover karne par Magnet ki Tarah Kam karta hai
-Shery.makeMagnet(".btn", {
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  duration: 1,
-});
+
 
 // Content me Jo H1 Hai use animate karne ke liye
 Shery.textAnimate(".content h2", {
