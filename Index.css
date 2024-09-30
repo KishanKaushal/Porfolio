@@ -747,7 +747,7 @@ hr {
     .copyright {
         font-size: 13px;
     }
-
+  
     .card {
         width: 90%;
         margin-bottom: 10px;
@@ -935,7 +935,9 @@ hr {
             justify-content: center;
 
         }
-
+        .skill-line{
+            justify-content: center;
+        }
         .navbar {
             z-index: 100;
         }
@@ -958,7 +960,7 @@ hr {
 
 .skill-line {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 20px;
     flex-wrap: wrap;
     gap: 20px;
